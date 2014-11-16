@@ -229,6 +229,9 @@
                         </form>
                     </td>
                 </tr>
+                <tr>
+                    <td colspan="4" width="100%">Do you look after, give help or support to family members, friends or neighbours?</td>
+                </tr>
                 <tr> 
                     <td>
                         <input id="button" type="submit" name="submit" value="Submit">
