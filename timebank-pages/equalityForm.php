@@ -179,6 +179,56 @@
                     <td colspan="2" width="50%">What is your employment status?</td>
                     <td colspan="2" width="50%">What is your education level?</td>
                 </tr>
+                <tr>
+                    <td colspan="2" width="50%">
+                        <form>
+                            <input type="radio" name="#" value="#">Employed (full time)
+                            <br>
+                            <input type="radio" name="#" value="#">Employed (part time)
+                            <br>
+                            <input type="radio" name="#" value="#">Self employed
+                            <br>
+                            <input type="radio" name="#" value="#">Not in paid work (looking for work)
+                            <br>
+                            <input type="radio" name="#" value="#">Full time student
+                            <br>
+                            <input type="radio" name="#" value="#">Unable to work (due to illness or disability)
+                            <br>
+                            <input type="radio" name="#" value="#">Carer (including parent)
+                            <br>
+                            <input type="radio" name="#" value="#">Retired
+                            <br>
+                            <input type="radio" name="#" value="#">Senior citizen (over 60)
+                            <br>
+                            <input type="radio" name="#" value="#">Unwaged
+                            <br>
+                            <input type="radio" name="#" value="#">Other (please specify)
+                            <br>
+                            <input type="radio" name="#" value="#">Prefer not to say
+                        </form>
+                    </td>
+                    <td colspan="2" width="50%">
+                        <form>
+                            <input type="radio" name="#" value="#">No formal qualifications
+                            <br>
+                            <input type="radio" name="#" value="#">GCSE/O-level
+                            <br>
+                            <input type="radio" name="#" value="#">A-Level
+                            <br>
+                            <input type="radio" name="#" value="#">Degree (BSc, BA)
+                            <br>
+                            <input type="radio" name="#" value="#">Postgraduate (MSc, MA, PhD)
+                            <br>
+                            <input type="radio" name="#" value="#">Professional (NVQ, Btec, HND)
+                            <br>
+                            <input type="radio" name="#" value="#">Appreticeship
+                            <br>
+                            <input type="radio" name="#" value="#">Prefer not to say
+                            <br>
+                            <input type="radio" name="#" value="#">Other (please specify)
+                        </form>
+                    </td>
+                </tr>
                 <tr> 
                     <td>
                         <input id="button" type="submit" name="submit" value="Submit">

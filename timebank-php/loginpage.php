@@ -22,8 +22,6 @@ if ($username != "" && $password != ""){ // check for blank fields
 	header("Location: ../index.php?page=login&errormessage=".$message);
 }
 
-var_dump($_SESSION);
-
 function login($username, $password){
 // check username and password with db
 // if yes, return true
