@@ -1,0 +1,8 @@
+http://www.phpmyadmin.co/
+Your account number is: 77544
+Your new database is now ready to use.
+To connect to your database use these details Host: sql4.freesqldatabase.com
+Database name: sql458226
+Database user: sql458226
+Database password: nZ1!yG7%
+Port number: 3306

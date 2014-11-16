@@ -1,0 +1,7 @@
+When submitting form, doesn't check password because input type is password - sorted
+
+Figure out hash password as well as comparing passwords and emails
+
+Upload function, for uploading files
+
+Work on the forms following the signup process
