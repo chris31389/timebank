@@ -9,7 +9,8 @@
         <h1 style="text-align:center"> Time Bank</h1>
         <?php
             if(isset($_SESSION['valid_user'])){
-                echo "<span>Hello $user</span>";
+                $user = $_SESSION['valid_user'];
+                echo "<span>Hello $user </span>";
                 echo '<a href="timebank-php/logout.php">Logout</a>';
             }
             else{

@@ -1,5 +1,5 @@
 <?php 
-    include 'dbConnect.php';
+    include_once 'dbConnect.php';
     
     //$tbl_name = "user";
     

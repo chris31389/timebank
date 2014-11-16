@@ -7,6 +7,7 @@
                     <td colspan="1" width="25%">Are you:</td>
                     <td colspan="1" width="25%">
                         <form>
+                            <input type="hidden" name="requiredSex" id="Sex" value="">
                             <input type="radio" name="requiredSex" id="Sex" value="male">Male
                             <input type="radio" name="requiredSex" id="Sex" value="female">Female
                         </form>
