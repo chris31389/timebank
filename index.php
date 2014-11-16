@@ -1,5 +1,5 @@
 <?php     
-    session_start(); // needs to be the first thing in the script
+    session_start(); // neeeds to be the first thing in the script
 ?>
         
 <!DOCTYPE html>
