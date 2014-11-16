@@ -10,7 +10,9 @@
         <?php
             if(isset($_SESSION['valid_user'])){
                 $user = $_SESSION['valid_user'];
-                echo "<span>Hello $user </span>";
+                echo "<span>Hello $user, </span>";
+                echo '<a href="index.php?page=addListing">Add a listing</a>';
+                echo "<span>, </span>";
                 echo '<a href="timebank-php/logout.php">Logout</a>';
             }
             else{
@@ -43,8 +45,17 @@
                 elseif ($_GET["page"] == "login") {
                     include 'timebank-pages/login-signup.php';
                 } 
+                elseif ($_GET["page"] == "reply") {
+                    include 'timebank-pages/reply.php';
+                } 
                 elseif ($_GET["page"] == "equality") {
                     include 'timebank-pages/equalityForm.php';
+                }
+                elseif ($_GET["page"] == "wellbeing") {
+                    include 'timebank-pages/wellbeingForm.php';
+                }
+                elseif ($_GET["page"] == "addListing") {
+                    include 'timebank-pages/addListing.php';
                 }
                 elseif ($_GET["page"] == "upload") {
                     include 'timebank-php/uploadreference.html';

@@ -3,8 +3,6 @@
     
     //$tbl_name = "user";
     
-   
-    
     //Collect data sent from form
     $username=$_POST['requiredUsername'];
     $password=$_POST['requiredPassword'];
@@ -46,7 +44,7 @@
         $result = mysql_query($sql);
         print "data added";
 
-    header("Location: ../index.php?page=event");
+    header("Location: ../index.php?page=listing");
     
     
 //$password = $_POST['password'];

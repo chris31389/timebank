@@ -6,11 +6,11 @@
                 <tr>
                     <td colspan="1" width="25%">Are you:</td>
                     <td colspan="1" width="25%">
-                        <form>
-                            <input type="hidden" name="requiredSex" id="Sex" value="">
-                            <input type="radio" name="requiredSex" id="Sex" value="male">Male
-                            <input type="radio" name="requiredSex" id="Sex" value="female">Female
-                        </form>
+                        <select name="requiredSex" id="requiredSex">
+                            <option value="">Please Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
                     </td>
                 </tr>
                 <tr> 
@@ -21,44 +21,38 @@
                 </tr>
                 <tr>
                     <td colspan="2" width="50%">
-                        <form>
-                            <input type="checkbox" name="#" value="#">A friend
+                      
+                            <input type="checkbox" name="hearAbout[]" value="friend">A friend
                             <br>
-                            <input type="checkbox" name="#" value="#">Health professional 
+                            <input type="checkbox" name="hearAbout[]" value="healthProf">Health professional 
                             <br>
-                            <input type="checkbox" name="#" value="#">Media (please state)
+                            <input type="checkbox" name="hearAbout[]" value="media">Media (please state)
                             <br>
-                            <input type="text" name="requiredtest" id="test">
+                            <!--<input type="text" name="" id="test">
+                            <br>-->
+                            <input type="checkbox" name="hearAbout[]" value="timeMemb">Timebank member 
                             <br>
-                            <input type="checkbox" name="#" value="#">Timebank member 
+                            <input type="checkbox" name="hearAbout[]" value="volOrg">Voluntary organisation
                             <br>
-                            <input type="checkbox" name="#" value="#">Voluntary organisation
+                            <input type="checkbox" name="hearAbout[]" value="web">Website
                             <br>
-                            <input type="checkbox" name="#" value="#">Website
-                            <br>
-                            <input type="checkbox" name="#" value="#">Other (please state)
-                            <br>
-                            <input type="text" name="#" value="">
-                        </form>
+                            <input type="checkbox" name="hearAbout[]" value="other">Other (please state)
+                            <!--<br>
+                            <input type="text" name="" id="test">-->
+                     
                     </td>
                     <td colspan="2" width="50%">
-                        <form>
-                            <input type="radio" name="requiredAge" id="hearAbout" value="#">18 to 24
-                            <br>
-                            <input type="radio" name="requiredAge" id="hearAbout" value="#">25 to 34 
-                            <br>
-                            <input type="radio" name="requiredAge" id="hearAbout" value="#">35 to 44 
-                            <br>
-                            <input type="radio" name="requiredAge" id="hearAbout" value="#">45 to 54 
-                            <br>
-                            <input type="radio" name="requiredAge" id="hearAbout" value="#">55 to 64 
-                            <br>
-                            <input type="radio" name="requiredAge" id="hearAbout" value="#">65 to 74 
-                            <br>
-                            <input type="radio" name="requiredAge" id="hearAbout" value="#">75+ 
-                            <br>
-                            <input type="radio" name="requiredAge" id="hearAbout" value="#">Prefer not to say 
-                        </form>
+                        <select name="requiredAge" id="requiredAge">
+                            <option value="">Please Select</option>
+                            <option value="18-24">18 to 24</option>-
+                            <option value="25-34">25 to 34 </option>
+                            <option value="35-44">35 to 44 </option>
+                            <option value="45-54">45 to 54 </option>
+                            <option value="55-64">55 to 64 </option>
+                            <option value="65-74">65 to 74 </option>
+                            <option value="75+">75+ </option>
+                            <option value="not saying">Prefer not to say</option> 
+                        </select>
                     </td>
                 </tr>
                 <tr>
@@ -67,115 +61,77 @@
                 </tr>
                 <tr>
                     <td colspan="2" width="50%">
-                        <form>
-                            <input type="radio" name="#" value="#">Single
-                            <br>
-                            <input type="radio" name="#" value="#">In a relationship 
-                            <br>
-                            <input type="radio" name="#" value="#">Living with partner
-                            <br>
-                            <input type="radio" name="#" value="#">Married/Civil Partnership
-                            <br>
-                            <input type="radio" name="#" value="#">Separated/Divorced Dissolved Civil Partnership
-                            <br>
-                            <input type="radio" name="#" value="#">Widowed/Surviving Civil Partner
-                            <br>
-                            <input type="radio" name="#" value="#">Other
-                            <br>
-                            <input type="radio" name="#" value="#">Prefer not to say
-                        </form>
+                        <select name="requiredRelationship" id="requiredRelationship">
+                            <option value="">Please Select</option>
+                            <option value="single">Single</option>
+                            <option value="relationship">In a relationship</option>
+                            <option value="partner">Living with partner</option>
+                            <option value="married">Married/Civil Partnership</option>
+                            <option value="divorced">Separated/Divorced Dissolved Civil Partnership</option>
+                            <option value="widowed">Widowed/Surviving Civil Partner</option>
+                            <option value="other">Other</option>
+                            <option value="not saying">Prefer not to say</option>
+                        </select>
                     </td>
                     <td colspan="2" width="50%">
-                        <form>
-                            <input type="radio" name="#" value="#">Heterosexual
-                            <br>
-                            <input type="radio" name="#" value="#">Bi-sexual 
-                            <br>
-                            <input type="radio" name="#" value="#">Gay
-                            <br>
-                            <input type="radio" name="#" value="#">Lesbian
-                            <br>
-                            <input type="radio" name="#" value="#">Prefer not to say
-                        </form>
+                        <select name="requiredOrientation" id="requiredOrientation">
+                            <option value="">Please Select</option>
+                            <option value="Hetrosexual">Heterosexual</option>
+                            <option value="Bisexual">Bi-sexual</option>
+                            <option value="Gay">Gay</option>
+                            <option value="Lesbain">Lesbian</option>
+                            <option value="not saying">Prefer not to say</option>
+                        </select>
                     </td>
                 </tr>
-                <tr>
-                    <td colspan="4" width="100%">What is your ethnicity?</td>
+                <tr>                    <td colspan="4" width="100%">What is your ethnicity?</td>
                 </tr>
                 <tr>
-                    <form>
-                        <td colspan="2" width="50%">
-                            <input type="radio" name="#" value="#">White English
-                            <br>
-                            <input type="radio" name="#" value="#">White Irish
-                            <br>
-                            <input type="radio" name="#" value="#">White other British
-                            <br>
-                            <input type="radio" name="#" value="#">Any other white background
-                            <br>
-                            <input type="radio" name="#" value="#">White and black Caribbean
-                            <br>
-                            <input type="radio" name="#" value="#">White and black African
-                            <br>
-                            <input type="radio" name="#" value="#">White and Asian
-                            <br>
-                            <input type="radio" name="#" value="#">Other mixed background
-                            <br>
-                            <input type="radio" name="#" value="#">Arab
-                            <br>
-                            <input type="radio" name="#" value="#">Other (please specify)
-                        </td>
-                        <td colspan="2" width="50%">
-                            <input type="radio" name="#" value="#">Indian
-                            <br>
-                            <input type="radio" name="#" value="#">Bangladeshi
-                            <br>
-                            <input type="radio" name="#" value="#">Pakistani
-                            <br>
-                            <input type="radio" name="#" value="#">Other Asian background
-                            <br>
-                            <input type="radio" name="#" value="#">Black Caribbean
-                            <br>
-                            <input type="radio" name="#" value="#">Black African
-                            <br>
-                            <input type="radio" name="#" value="#">Other black background
-                            <br>
-                            <input type="radio" name="#" value="#">Chinese
-                            <br>
-                            <input type="radio" name="#" value="#">Gypsy/Romany/Traveler/Other
-                            <br>
-                            <input type="radio" name="#" value="#">Prefer not to say
-                        </td>
-                    </form>
+                    <td colspan="2" width="50%">
+                        <select name="requiredEthnicity" id="requiredEthnicity">
+                            <option value="">Please Select</option>
+                            <option value="White English">White English</option>
+                            <option value="White Irish">White Irish</option>
+                            <option value="White other British">White other British</option>
+                            <option value="Any other white background">Any other white background</option>
+                            <option value="White and black Caribbean">White and black Caribbean</option>
+                            <option value="White and black African">White and black African</option>
+                            <option value="White and Asian">White and Asian</option>
+                            <option value="Other mixed background">Other mixed background</option>
+                            <option value="Arab">Arab</option>
+                            <option value="Indian">Indian</option>
+                            <option value="Bangladeshi">Bangladeshi</option>
+                            <option value="Paxistani">Pakistani</option>
+                            <option value="Other Asian background">Other Asian background</option>
+                            <option value="Black Caribbean">Black Caribbean</option>
+                            <option value="Black African">Black African</option>
+                            <option value="Other Black Background">Other black background
+                            <option value="Chinese">Chinese</option>
+                            <option value="Traveller">Gypsy/Romany/Traveler/Other</option>
+                            <option value="Other">Other (please specify)</option>
+                            <option value="Not saying">Prefer not to say</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="4" width="100%">What is your religion?</td>
                 </tr>
                 <tr>
-                    <form>
-                        <td colspan="2" width="50%">
-                            <input type="radio" name="#" value="#">Christian (all denominations)
-                            <br>
-                            <input type="radio" name="#" value="#">Buddhist
-                            <br>
-                            <input type="radio" name="#" value="#">Hindu
-                            <br>
-                            <input type="radio" name="#" value="#">Jewish
-                            <br>
-                            <input type="radio" name="#" value="#">Muslim
-                            <br>
-                            <input type="radio" name="#" value="#">Sikh
-                        </td>
-                        <td colspan="2" width="50%">
-                            <input type="radio" name="#" value="#">Atheist
-                            <br>
-                            <input type="radio" name="#" value="#">No religion
-                            <br>
-                            <input type="radio" name="#" value="#">Other (please state)
-                            <br>
-                            <input type="radio" name="#" value="#">Prefer not to say
-                        </td>
-                    </form>
+                    <td colspan="2" width="50%">
+                        <select name = "requiredReligion" id="requiredReligion">
+                            <option value="">Please Select</option>
+                            <option value="Christian">Christian (all denominations)</option>
+                            <option value="Bhuddist">Buddhist</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Jewish">Jewish</option>
+                            <option value="Muslim">Muslim</option>
+                            <option value="Sikh">Sikh</option>
+                            <option value="Atheist">Atheist</option>
+                            <option value="No religion">No religion</option>
+                            <option value="Other">Other (please state)</option>
+                            <option value="not saying">Prefer not to say</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="2" width="50%">What is your employment status?</td>
@@ -183,52 +139,35 @@
                 </tr>
                 <tr>
                     <td colspan="2" width="50%">
-                        <form>
-                            <input type="radio" name="#" value="#">Employed (full time)
-                            <br>
-                            <input type="radio" name="#" value="#">Employed (part time)
-                            <br>
-                            <input type="radio" name="#" value="#">Self employed
-                            <br>
-                            <input type="radio" name="#" value="#">Not in paid work (looking for work)
-                            <br>
-                            <input type="radio" name="#" value="#">Full time student
-                            <br>
-                            <input type="radio" name="#" value="#">Unable to work (due to illness or disability)
-                            <br>
-                            <input type="radio" name="#" value="#">Carer (including parent)
-                            <br>
-                            <input type="radio" name="#" value="#">Retired
-                            <br>
-                            <input type="radio" name="#" value="#">Senior citizen (over 60)
-                            <br>
-                            <input type="radio" name="#" value="#">Unwaged
-                            <br>
-                            <input type="radio" name="#" value="#">Other (please specify)
-                            <br>
-                            <input type="radio" name="#" value="#">Prefer not to say
-                        </form>
+                        <select name="requiredEmployment" id="requiredEmployment">
+                            <option value="">Please Select</option>
+                            <option value="FT">Employed (full time)</option>
+                            <option value="PT">Employed (part time)</option>
+                            <option value="SE">Self employed</option>
+                            <option value="not in paid work">Not in paid work (looking for work)</option>
+                            <option value="FT Student">Full time student</option>
+                            <option value="Unable illness">Unable to work (due to illness or disability)</option>
+                            <option value="Carer">Carer (including parent)</option>
+                            <option value="Retired">Retired</option>
+                            <option value="Senior">Senior citizen (over 60)</option>
+                            <option value="inwaged">Unwaged</option>
+                            <option value="other">Other (please specify)</option>
+                            <option value="not saying">Prefer not to say</option>
+                        </select>
                     </td>
                     <td colspan="2" width="50%">
-                        <form>
-                            <input type="radio" name="#" value="#">No formal qualifications
-                            <br>
-                            <input type="radio" name="#" value="#">GCSE/O-level
-                            <br>
-                            <input type="radio" name="#" value="#">A-Level
-                            <br>
-                            <input type="radio" name="#" value="#">Degree (BSc, BA)
-                            <br>
-                            <input type="radio" name="#" value="#">Postgraduate (MSc, MA, PhD)
-                            <br>
-                            <input type="radio" name="#" value="#">Professional (NVQ, Btec, HND)
-                            <br>
-                            <input type="radio" name="#" value="#">Appreticeship
-                            <br>
-                            <input type="radio" name="#" value="#">Prefer not to say
-                            <br>
-                            <input type="radio" name="#" value="#">Other (please specify)
-                        </form>
+                        <select name ="requiredEducation" id="requiredEducation">
+                            <option value="">Please Select</option>
+                            <option value="none">No formal qualifications</option>
+                            <option value="gcse-olevel">GCSE/O-level</option>
+                            <option value="A level">A-Level</option>
+                            <option value="Degree">Degree (BSc, BA)</option>
+                            <option value="Post Grad">Postgraduate (MSc, MA, PhD)</option>
+                            <option value="Professional">Professional (NVQ, Btec, HND)</option>
+                            <option value=Apprentice>Appreticeship</option>
+                            <option value="not saying">Prefer not to say</option>
+                            <option value="other">Other (please specify)</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
@@ -236,38 +175,38 @@
                 </tr>
                 <tr>
                     <td colspan="4" width="100%">
-                        <form>
-                            <input type="radio" name="#" value="#">Yes
-                            <input type="radio" name="#" value="#">No
-                        </form>
+                        <select name="requiredCare" id="requiredCare">
+                            <option value="">Please Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="4" width="100%">Is the care, help or support you provide due to:</td>
                 </tr>
                 <tr>
-                    <form>
-                        <td colspan="2" width="50%">
-                            <input type="radio" name="#" value="#">Long-term physical or mental-ill-health disability
-                            <br>
-                            <input type="radio" name="#" value="#">Prefer not to say
-                        </td>
-                        <td colspan="2" width="50%">
-                            <input type="radio" name="#" value="#">Problems related to old age
-                            <br>
-                            <input type="radio" name="#" value="#">Other (please specify)
-                        </td>
-                    </form>
+                    <td colspan="2" width="50%">
+                        <select name="requiredCareReason" id="requiredCareReason">
+                            <option value="">Please Select</option>
+                            <option value="phys men disability">Long-term physical or mental-ill-health disability</option>
+                            <option value="old age">Problems related to old age</option>
+                            <option value="not saying">Prefer not to say</option>
+                            <option value="other">Other (please specify)</option>
+                            <option value="NA">Not applicable</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="4" width="100%">Are your day-to-day activities limited because of a health condition?</td>
                 </tr>
                 <tr>
                     <td colspan="4" width="100%">
-                        <form>
-                            <input type="radio" name="#" value="#">Yes
-                            <input type="radio" name="#" value="#">No
-                        </form>
+                        <select name="requiredLimited" id="requiredLimited">
+                            <option value="">Please Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
@@ -275,29 +214,31 @@
                 </tr>
                 <tr>
                     <td colspan="4" width="100%">
-                        <form>
-                            <input type="checkbox" name="#" value="#">Ability to concentrate, learn or understand (Learning Disability/Difficulty)
+                       
+
+                    
+                            <input type="checkbox" name="limitedActDetails[]" value="1">Ability to concentrate, learn or understand (Learning Disability/Difficulty)
                             <br>
-                            <input type="checkbox" name="#" value="#">Dexterity (e.g. carrying objects, using a keyboard)
+                            <input type="checkbox" name="limitedActDetails[]" value="2">Dexterity (e.g. carrying objects, using a keyboard)
                             <br>
-                            <input type="checkbox" name="#" value="#">Hearing (e.g. difficulty walking short distances, climbing stairs)
+                            <input type="checkbox" name="limitedActDetails[]" value="3">Hearing (e.g. difficulty walking short distances, climbing stairs)
                             <br>
-                            <input type="checkbox" name="#" value="#">Memory
+                            <input type="checkbox" name="limitedActDetails[]" value="4">Memory
                             <br>
-                            <input type="checkbox" name="#" value="#">Mental ill-health
+                            <input type="checkbox" name="limitedActDetails[]" value="5">Mental ill-health
                             <br>
-                            <input type="checkbox" name="#" value="#">Mobility (e.g. difficulty walking short distances, climbing stairs)
+                            <input type="checkbox" name="limitedActDetails[]" value="6">Mobility (e.g. difficulty walking short distances, climbing stairs)
                             <br>
-                            <input type="checkbox" name="#" value="#">Social or behavioral issues (e.g. Autism, Attention Deficit Disorder, Asperger Syndrome)
+                            <input type="checkbox" name="limitedActDetails[]" value="7">Social or behavioral issues (e.g. Autism, Attention Deficit Disorder, Asperger Syndrome)
                             <br>
-                            <input type="checkbox" name="#" value="#">Stamina or breathing difficulty or fatigue
+                            <input type="checkbox" name="limitedActDetails[]" value="8">Stamina or breathing difficulty or fatigue
                             <br>
-                            <input type="checkbox" name="#" value="#">Vision (e.g. blindness or partial sight)
+                            <input type="checkbox" name="limitedActDetails[]" value="9">Vision (e.g. blindness or partial sight)
                             <br>
-                            <input type="checkbox" name="#" value="#">Prefer not to say
+                            <input type="checkbox" name="limitedActDetails[]" value="10">Prefer not to say
                             <br>
-                            <input type="checkbox" name="#" value="#">Other (please specify)
-                        </form>
+                            <input type="checkbox" name="limitedActDetails[]" value="11">Other (please specify)
+                       
                     </td>
                 </tr>
                 <tr>
@@ -305,10 +246,11 @@
                 </tr>
                 <tr>
                     <td colspan="4" width="100%">
-                        <form>
-                            <input type="radio" name="#" value="#">Yes
-                            <input type="radio" name="#" value="#">No
-                        </form>
+                        <select name="requiredReceiveSupport" id="requiredReceivedSupport">
+                            <option value="">Please Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
                     </td>
                 </tr>
                 </tr>
@@ -316,49 +258,45 @@
                     <td colspan="4" width="100%">Who provides the service or support?</td>
                 </tr>
                 <tr>
-                    <form>
-                        <td colspan="2" width="50%">
-                            <input type="radio" name="#" value="#">Adult Social Care
-                            <br>
-                            <input type="radio" name="#" value="#">GP
-                            <br>
-                            <input type="radio" name="#" value="#">Mental Health
-                            <br>
-                            <input type="radio" name="#" value="#">Private sector provider
-                            <br>
-                            <input type="radio" name="#" value="#">Other (please specify)
-                        </td>
-                        <td colspan="2" width="50%">
-                            <input type="radio" name="#" value="#">Counselor
-                            <br>
-                            <input type="radio" name="#" value="#">Medical professional
-                            <br>
-                            <input type="radio" name="#" value="#">NHS
-                            <br>
-                            <input type="radio" name="#" value="#">Prefer not to say
-                        </td>
-                    </form>
+                    <td colspan="2" width="50%">
+                        <select name="requiredSupportProvider" id="reqiuredSupportProvider">
+                            <option value="">Please Select</option>
+                            <option value="adultCare">Adult Social Care</option>
+                            <option value="gp">GP</option>
+                            <option value="menHeal">Mental Health</option>
+                            <option value="priSector">Private sector provider</option>
+                            <option value="other">Other (please specify)</option>
+                            <option value="counselor">Counselor</option>
+                            <option value="medProf">Medical professional</option>
+                            <option value="nhs">NHS</option>
+                            <option value="not saying">Prefer not to say</option>
+                            <option value="NA">Not applicable</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="4" width="100%">Do you have a Care Plan?</td>
                 </tr>
                 <tr>
                     <td colspan="4" width="100%">
-                        <form>
-                            <input type="radio" name="#" value="#">Yes
-                            <input type="radio" name="#" value="#">No
-                        </form>
+                        <select name="requiredCarePlan" id="requiredCarePlan">
+                            <option value="">Please Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="4" width="100%">If yes, is your Care Plan</td>
+                    <td colspan="4" width="100%">If yes, is your Care Plan:</td>
                 </tr>
                 <tr>
                     <td colspan="4" width="100%">
-                        <form>
-                            <input type="radio" name="#" value="#">Funded
-                            <input type="radio" name="#" value="#">Self-funded
-                        </form>
+                        <select name="requiredCarePlanType" id="requiredCarePlanType">
+                            <option value="">Please Select</option>
+                            <option value="funded">Funded</option>
+                            <option value="selfFunded">Self-funded</option>
+                            <option value="NA">Not applicable</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
@@ -366,10 +304,11 @@
                 </tr>
                 <tr>
                     <td colspan="4" width="100%">
-                        <form>
-                            <input type="radio" name="#" value="#">Yes
-                            <input type="radio" name="#" value="#">No
-                        </form>
+                        <select name="requiredPastActivities" id="requiredPastActivities">
+                            <option value="">Please Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
@@ -378,15 +317,15 @@
                 <tr>
                     <td colspan="4" width="100%">
                         <form>
-                            <input type="checkbox" name="#" value="#">Volunteered to help an individual (e.g. to help a neighbor)
+                            <input type="checkbox" name="volInd" value="1">Volunteered to help an individual (e.g. to help a neighbor)
                             <br>
-                            <input type="checkbox" name="#" value="#">Volunteered through your networks (e.g. through work, or your children's school)
+                            <input type="checkbox" name="volNet" value="1">Volunteered through your networks (e.g. through work, or your children's school)
                             <br>
-                            <input type="checkbox" name="#" value="#">Volunteered outside of your networks (e.g. with a charity or community centre)
+                            <input type="checkbox" name="volOut" value="1">Volunteered outside of your networks (e.g. with a charity or community centre)
                             <br>
-                            <input type="checkbox" name="#" value="#">Been a member of a group, club or society (hobby group, religious, political party)
+                            <input type="checkbox" name="memGrp" value="1">Been a member of a group, club or society (hobby group, religious, political party)
                             <br>
-                            <input type="checkbox" name="#" value="#">Attended any community events (e.g. street parties, fundraisers)
+                            <input type="checkbox" name="AttCommEv" value="1">Attended any community events (e.g. street parties, fundraisers)
                         </form>
                     </td>
                 </tr>

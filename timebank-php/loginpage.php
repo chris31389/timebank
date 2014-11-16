@@ -10,7 +10,7 @@ if ($username != "" && $password != ""){ // check for blank fields
 	$isuser = login($username, $hashedPassword); // use the login() function to check the credentials
     if ($isuser){ // true therefore they are in the database so register the user id
         $_SESSION['valid_user'] = $username; // set a session variable we can test for in other scripts
-        header("Location: ../index.php?page=event"); // redirect to a different page than the login page
+        header("Location: ../index.php?page=listing"); // redirect to a different page than the login page
     }else{
       // unsuccessful login
 	  	$message = 'You could not be logged in';
@@ -37,6 +37,8 @@ function login($username, $password){
     $sql="SELECT * FROM $tbl_name WHERE username='$username'"; // and password='$password'";
     // $sql="SELECT 1";
     $result=mysql_query($sql);
+    
+    mysql_close();
 
     if (mysql_num_rows($result)>0){ //there was a result so the user is valid
         while($row=mysql_fetch_array($result)){
@@ -44,6 +46,7 @@ function login($username, $password){
             if($row['password'] == $password){
                 session_start(); // needs to be the first thing in the script
                 $_SESSION['usertype'] = 'valid_user'; // set a session variable we can use elsewhere
+                $_SESSION['userID'] = $row['userID'];
                 return true;
             }
         }
@@ -51,5 +54,7 @@ function login($username, $password){
     }else{
         return false;
     }
+    
+    
 }
 ?>
