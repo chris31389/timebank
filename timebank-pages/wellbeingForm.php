@@ -287,6 +287,93 @@
                         </select>
                     </td>
                 </tr>
+                <tr>
+                    <td>Give to others</td>
+                    <td colspan="2" width="50%">
+                        <select name="requiredQ20" id="requiredQ20">
+                            <option value="">Please Select</option>
+                            <option value="1">Not at all</option>
+                            <option value="2">Very little</option>
+                            <option value="3">To some extent</option>
+                            <option value="4">To a great extent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contribute to the community</td>
+                    <td colspan="2" width="50%">
+                        <select name="requiredQ21" id="requiredQ21">
+                            <option value="">Please Select</option>
+                            <option value="1">Not at all</option>
+                            <option value="2">Very little</option>
+                            <option value="3">To some extent</option>
+                            <option value="4">To a great extent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Meet new friends</td>
+                    <td colspan="2" width="50%">
+                        <select name="requiredQ22" id="requiredQ22">
+                            <option value="">Please Select</option>
+                            <option value="1">Not at all</option>
+                            <option value="2">Very little</option>
+                            <option value="3">To some extent</option>
+                            <option value="4">To a great extent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Learn new skills</td>
+                    <td colspan="2" width="50%">
+                        <select name="requiredQ23" id="requiredQ23">
+                            <option value="">Please Select</option>
+                            <option value="1">Not at all</option>
+                            <option value="2">Very little</option>
+                            <option value="3">To some extent</option>
+                            <option value="4">To a great extent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Meet a personal goal (e.g. health, mental health)</td>
+                    <td colspan="2" width="50%">
+                        <select name="requiredQ24" id="requiredQ24">
+                            <option value="">Please Select</option>
+                            <option value="1">Not at all</option>
+                            <option value="2">Very little</option>
+                            <option value="3">To some extent</option>
+                            <option value="4">To a great extent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Act on my values</td>
+                    <td colspan="2" width="50%">
+                        <select name="requiredQ25" id="requiredQ25">
+                            <option value="">Please Select</option>
+                            <option value="1">Not at all</option>
+                            <option value="2">Very little</option>
+                            <option value="3">To some extent</option>
+                            <option value="4">To a great extent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" width="50%"><h4>Please use the space below to add any wants or offers</h4></td>
+                </tr>
+                <tr>
+                    <td colspan="2" width="50%"><h3>I would like to receive...</h3></td>
+                </tr>
+                <tr>
+                    <td><textarea name="receive" id="receive" cols="70%" rows="15%"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" width="50%"><h3>I can offer...</h3></td>
+                </tr>
+                <tr>
+                    <td><textarea name="offer" id="offer" cols="70%" rows="15%"></textarea></td>
+                </tr>
                 <tr> 
                     <td>
                         <input id="button" type="submit" name="submit" value="Submit">
