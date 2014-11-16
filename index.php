@@ -13,6 +13,7 @@
             echo "<span>$user</span>";
         }
         ?>
+        
 <!DOCTYPE html>
 <html>
     <head><script src="js/checkthis.js"></script></head>

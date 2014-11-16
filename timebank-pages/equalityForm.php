@@ -94,7 +94,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="4">What is your ethnicity?</td>
+                    <td colspan="4" width="100%">What is your ethnicity?</td>
                 </tr>
                 <tr>
                     <td colspan="2" width="50%">
@@ -145,7 +145,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="4">What is your religion?</td>
+                    <td colspan="4" width="100%">What is your religion?</td>
                 </tr>
                 <tr>
                     <td colspan="2" width="50%">
