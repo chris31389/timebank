@@ -6,14 +6,24 @@
 </head>
 
 <body>
-                      <form enctype="multipart/form-data" action="processreference.php" method="POST" onsubmit = "return checkrequired(this)">
+                     <a href = "index.php?page=home">click here</a>
+                     <form enctype="multipart/form-data" action="processreference.php" method="POST" onsubmit = "return checkrequired(this)">
 	 					  <p>Upload reference 
 							<input name="uploaded" type="file" />
 	 					  </p>
+	 					  <p>  <select name="requiredUploadType" id="requiredUploadType">
+                          <option value="unselected">Please Choose</option>
+                         <option value="DBS">DBS</option>
+                         <option value="insurance">Insurance</option>
+                         <option value="reference">Reference</option>
+                         </select></p>
+
+	 					 
 	 					  <p> 					
 	 					    <input type="submit" name="Submit" value="Upload" />
 	 					  	 					    
 				            </p>
                         </form>
+
 </body>
 </html>

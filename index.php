@@ -1,25 +1,21 @@
-        <?php     
-        session_start(); // needs to be the first thing in the script
-        if(isset($_SESSION['valid_user'])){
-                echo '<a href="timebank-php/logout.php">Logout</a>';
-            }
-            else{
-                echo '<a href="index.php?page=login">Login or Signup</a>';
-            }
-            
-           
-        if(isset($_SESSION['valid_user'])){
-            $user = $_SESSION['valid_user'];
-            echo "<span>$user</span>";
-        }
-        ?>
+<?php     
+    session_start(); // needs to be the first thing in the script
+?>
         
 <!DOCTYPE html>
 <html>
     <head><script src="js/checkthis.js"></script></head>
     <body>
         <h1 style="text-align:center"> Time Bank</h1>
-        
+        <?php
+            if(isset($_SESSION['valid_user'])){
+                echo "<span>Hello $user</span>";
+                echo '<a href="timebank-php/logout.php">Logout</a>';
+            }
+            else{
+                echo '<a href="index.php?page=login">Login or Signup</a>';
+            }
+        ?>
         <table border="1" style="width:100%">
             <tr>
                 <th width="20%"><a href="index.php?page=home">Homepage</a></th>
@@ -31,10 +27,7 @@
         </table>
         <div id="body-container">
             <?php 
-                if ($_GET["page"] == "home") {
-                    include 'timebank-pages/home.php';
-                }
-                elseif ($_GET["page"] == "listing") {
+                if ($_GET["page"] == "listing") {
                     include 'timebank-pages/listing.php';
                 }
                 elseif ($_GET["page"] == "how") {
@@ -52,7 +45,14 @@
                 elseif ($_GET["page"] == "equality") {
                     include 'timebank-pages/equalityForm.php';
                 }
+                elseif ($_GET["page"] == "upload") {
+                    include 'timebank-php/uploadreference.html';
+                }
+                else{
+                    include 'timebank-pages/home.php';
+                }
             ?>
         </div>
+        <a href="timebank-pages/test.php">Test</a>
     </body>
 </html>

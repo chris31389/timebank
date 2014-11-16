@@ -33,17 +33,22 @@
     // Hash the password to be stored into the database
    $password = mhash(MHASH_MD4,$password);
     
-     // Connect to server and select databse.
-    $linkID = @mysql_connect("sql4.freesqldatabase.com", "sql458226", "nZ1!yG7%")or die("cannot connect"); 
-    mysql_select_db("sql458226" , $linkID)or die("cannot select DB");
+         // Connect to server and select databse.
+        // $linkID = @mysql_connect(HOST, USER, PASSWORD)or die("cannot connect"); 
+        // mysql_select_db("sql458226" , $linkID)or die("cannot select DB");
+        
+        
+        mysql_connect(HOST, USER, PASSWORD)or die("cannot connect"); 
+        mysql_select_db(DATABASE);
+        
+        $sql = "INSERT INTO user( preferredContact, name, add1, add2, add3, town, county, postcode, phone, email, dateAdded, username, password ) VALUES('$preferredContact', '$name', '$add1', '$add2', '$add3', '$town', '$county', '$postcode', '$phone', '$email', now(), '$username', '$password')";
+        // $result = mysql_query($sql, $linkID)or die(mysql_error()); 
+        $result = mysql_query($sql);
+        print "data added";
+
+    header("Location: ../index.php?page=event");
     
-    $result = mysql_query("INSERT INTO user( preferredContact, name, add1, add2, add3, town, county, postcode, phone, email, dateAdded, username, password ) VALUES('$preferredContact', '$name', '$add1', '$add2', '$add3', '$town', '$county', '$postcode', '$phone', '$email', now(), '$username', '$password')", $linkID)or die(mysql_error()); 
-     print "data added";
-?>
-
-
-
-
+    
 //$password = $_POST['password'];
 
 //$password = mhash(MHASH_MD4,$password);
@@ -52,3 +57,5 @@
 //$realPassword = (get password from database)
 
 //if $password != $realPassword 
+
+?>

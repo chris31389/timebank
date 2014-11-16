@@ -6,13 +6,14 @@
 </head>
 
 <body>
+    <p> We have go to here</p>
 <?PHP
-//$userID = $_POST['$userID'];
+$userID = $_POST['$userID'];
 $userID = '1';
-$uploadtype = $_POST['requiredUploadType']			
+$uploadtype = $_POST['requiredUploadType'];			
 				
-				$target = "reference/"; 
-$name = "reference/" . basename($_FILES['uploaded']['name']);
+				$target = "../reference/"; 
+$name = "../reference/" . basename($_FILES['uploaded']['name']);
 
 $target = $target . basename( $_FILES['uploaded']['name']) ; 
 $ok=1; 
@@ -40,13 +41,12 @@ Echo "Sorry your file was not uploaded";
 else 
 { 
 if(move_uploaded_file($_FILES['uploaded']['tmp_name'], $target)) 
- 
-     
+
 { 
-     // Connect to server and select databse.
-    $linkID = @mysql_connect("sql4.freesqldatabase.com", "sql458226", "nZ1!yG7%")or die("cannot connect"); 
-    mysql_select_db("sql458226" , $linkID)or die("cannot select DB");
-    
+   // Connect to server and select databse.
+  $linkID = @mysql_connect("sql4.freesqldatabase.com", "sql458226", "nZ1!yG7%")or die("cannot connect"); 
+  mysql_select_db("sql458226" , $linkID)or die("cannot select DB");
+  
 $result = mysql_query("INSERT INTO uploads( userID, filetype, dateuploaded, name ) VALUES('$userID', '$uploadtype', now(), '$name')", $linkID)or die(mysql_error()); 
 print  "<h1>The file ". basename( $_FILES['uploaded']['name']). " has been uploaded</h1>"; 
 } 
@@ -55,7 +55,6 @@ else
 print "<h1>Sorry, there was a problem uploading your file.</h1>"; 
 } 
 } 
-
 ?>
 
 </body>

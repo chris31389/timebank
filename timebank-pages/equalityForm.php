@@ -1,13 +1,14 @@
 <div id="equality">
     <fieldset style="width:80%">
         <legend>Equalities Monitoring Form</legend> 
-        <form method="POST" action="../timebank-php/#.php" onsubmit="return checkrequired(this)"> 
+        <form method="POST" action="../timebank-php/equalityCheck.php" onsubmit="return checkrequired(this)"> 
             <table border="0">
                 <tr>
                     <td colspan="1" width="25%">Are you:</td>
                     <td colspan="1" width="25%">
                         <form>
-                            <input type="radio" name="sex" value="male">Male <input type="radio" name="sex" value="female">Female
+                            <input type="radio" name="requiredSex" id="Sex" value="male">Male
+                            <input type="radio" name="requiredSex" id="Sex" value="female">Female
                         </form>
                     </td>
                 </tr>
@@ -20,38 +21,42 @@
                 <tr>
                     <td colspan="2" width="50%">
                         <form>
-                            <input type="radio" name="#" value="#">A friend
+                            <input type="checkbox" name="#" value="#">A friend
                             <br>
-                            <input type="radio" name="#" value="#">Health professional 
+                            <input type="checkbox" name="#" value="#">Health professional 
                             <br>
-                            <input type="radio" name="#" value="#">Media
+                            <input type="checkbox" name="#" value="#">Media (please state)
                             <br>
-                            <input type="radio" name="#" value="#">Timebank member 
+                            <input type="text" name="requiredtest" id="test">
                             <br>
-                            <input type="radio" name="#" value="#">Voluntary organisation
+                            <input type="checkbox" name="#" value="#">Timebank member 
                             <br>
-                            <input type="radio" name="#" value="#">Website
+                            <input type="checkbox" name="#" value="#">Voluntary organisation
                             <br>
-                            <input type="radio" name="#" value="#">Other (please state)
+                            <input type="checkbox" name="#" value="#">Website
+                            <br>
+                            <input type="checkbox" name="#" value="#">Other (please state)
+                            <br>
+                            <input type="text" name="#" value="">
                         </form>
                     </td>
                     <td colspan="2" width="50%">
                         <form>
-                            <input type="radio" name="#" value="#">18 to 24
+                            <input type="radio" name="requiredAge" id="hearAbout" value="#">18 to 24
                             <br>
-                            <input type="radio" name="#" value="#">25 to 34 
+                            <input type="radio" name="requiredAge" id="hearAbout" value="#">25 to 34 
                             <br>
-                            <input type="radio" name="#" value="#">35 to 44 
+                            <input type="radio" name="requiredAge" id="hearAbout" value="#">35 to 44 
                             <br>
-                            <input type="radio" name="#" value="#">45 to 54 
+                            <input type="radio" name="requiredAge" id="hearAbout" value="#">45 to 54 
                             <br>
-                            <input type="radio" name="#" value="#">55 to 64 
+                            <input type="radio" name="requiredAge" id="hearAbout" value="#">55 to 64 
                             <br>
-                            <input type="radio" name="#" value="#">65 to 74 
+                            <input type="radio" name="requiredAge" id="hearAbout" value="#">65 to 74 
                             <br>
-                            <input type="radio" name="#" value="#">75+ 
+                            <input type="radio" name="requiredAge" id="hearAbout" value="#">75+ 
                             <br>
-                            <input type="radio" name="#" value="#">Prefer not to say 
+                            <input type="radio" name="requiredAge" id="hearAbout" value="#">Prefer not to say 
                         </form>
                     </td>
                 </tr>
@@ -97,8 +102,8 @@
                     <td colspan="4" width="100%">What is your ethnicity?</td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="50%">
-                        <form>
+                    <form>
+                        <td colspan="2" width="50%">
                             <input type="radio" name="#" value="#">White English
                             <br>
                             <input type="radio" name="#" value="#">White Irish
@@ -118,10 +123,8 @@
                             <input type="radio" name="#" value="#">Arab
                             <br>
                             <input type="radio" name="#" value="#">Other (please specify)
-                        </form>
-                    </td>
-                    <td colspan="2" width="50%">
-                        <form>
+                        </td>
+                        <td colspan="2" width="50%">
                             <input type="radio" name="#" value="#">Indian
                             <br>
                             <input type="radio" name="#" value="#">Bangladeshi
@@ -141,15 +144,15 @@
                             <input type="radio" name="#" value="#">Gypsy/Romany/Traveler/Other
                             <br>
                             <input type="radio" name="#" value="#">Prefer not to say
-                        </form>
-                    </td>
+                        </td>
+                    </form>
                 </tr>
                 <tr>
                     <td colspan="4" width="100%">What is your religion?</td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="50%">
-                        <form>
+                    <form>
+                        <td colspan="2" width="50%">
                             <input type="radio" name="#" value="#">Christian (all denominations)
                             <br>
                             <input type="radio" name="#" value="#">Buddhist
@@ -161,10 +164,8 @@
                             <input type="radio" name="#" value="#">Muslim
                             <br>
                             <input type="radio" name="#" value="#">Sikh
-                        </form>
-                    </td>
-                    <td colspan="2" width="50%">
-                        <form>
+                        </td>
+                        <td colspan="2" width="50%">
                             <input type="radio" name="#" value="#">Atheist
                             <br>
                             <input type="radio" name="#" value="#">No religion
@@ -172,8 +173,8 @@
                             <input type="radio" name="#" value="#">Other (please state)
                             <br>
                             <input type="radio" name="#" value="#">Prefer not to say
-                        </form>
-                    </td>
+                        </td>
+                    </form>
                 </tr>
                 <tr>
                     <td colspan="2" width="50%">What is your employment status?</td>
@@ -235,8 +236,156 @@
                 <tr>
                     <td colspan="4" width="100%">
                         <form>
-                            <input type="radio" name="#" value="#" colspan="2" width="50%">Yes
-                            <input type="radio" name="#" value="#" colspan="2" width="50%">No
+                            <input type="radio" name="#" value="#">Yes
+                            <input type="radio" name="#" value="#">No
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" width="100%">Is the care, help or support you provide due to:</td>
+                </tr>
+                <tr>
+                    <form>
+                        <td colspan="2" width="50%">
+                            <input type="radio" name="#" value="#">Long-term physical or mental-ill-health disability
+                            <br>
+                            <input type="radio" name="#" value="#">Prefer not to say
+                        </td>
+                        <td colspan="2" width="50%">
+                            <input type="radio" name="#" value="#">Problems related to old age
+                            <br>
+                            <input type="radio" name="#" value="#">Other (please specify)
+                        </td>
+                    </form>
+                </tr>
+                <tr>
+                    <td colspan="4" width="100%">Are your day-to-day activities limited because of a health condition?</td>
+                </tr>
+                <tr>
+                    <td colspan="4" width="100%">
+                        <form>
+                            <input type="radio" name="#" value="#">Yes
+                            <input type="radio" name="#" value="#">No
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" width="100%">If yes, please select all that apply</td>
+                </tr>
+                <tr>
+                    <td colspan="4" width="100%">
+                        <form>
+                            <input type="checkbox" name="#" value="#">Ability to concentrate, learn or understand (Learning Disability/Difficulty)
+                            <br>
+                            <input type="checkbox" name="#" value="#">Dexterity (e.g. carrying objects, using a keyboard)
+                            <br>
+                            <input type="checkbox" name="#" value="#">Hearing (e.g. difficulty walking short distances, climbing stairs)
+                            <br>
+                            <input type="checkbox" name="#" value="#">Memory
+                            <br>
+                            <input type="checkbox" name="#" value="#">Mental ill-health
+                            <br>
+                            <input type="checkbox" name="#" value="#">Mobility (e.g. difficulty walking short distances, climbing stairs)
+                            <br>
+                            <input type="checkbox" name="#" value="#">Social or behavioral issues (e.g. Autism, Attention Deficit Disorder, Asperger Syndrome)
+                            <br>
+                            <input type="checkbox" name="#" value="#">Stamina or breathing difficulty or fatigue
+                            <br>
+                            <input type="checkbox" name="#" value="#">Vision (e.g. blindness or partial sight)
+                            <br>
+                            <input type="checkbox" name="#" value="#">Prefer not to say
+                            <br>
+                            <input type="checkbox" name="#" value="#">Other (please specify)
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" width="100%">Are you receiving a service or support from a health or social care provider?</td>
+                </tr>
+                <tr>
+                    <td colspan="4" width="100%">
+                        <form>
+                            <input type="radio" name="#" value="#">Yes
+                            <input type="radio" name="#" value="#">No
+                        </form>
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td colspan="4" width="100%">Who provides the service or support?</td>
+                </tr>
+                <tr>
+                    <form>
+                        <td colspan="2" width="50%">
+                            <input type="radio" name="#" value="#">Adult Social Care
+                            <br>
+                            <input type="radio" name="#" value="#">GP
+                            <br>
+                            <input type="radio" name="#" value="#">Mental Health
+                            <br>
+                            <input type="radio" name="#" value="#">Private sector provider
+                            <br>
+                            <input type="radio" name="#" value="#">Other (please specify)
+                        </td>
+                        <td colspan="2" width="50%">
+                            <input type="radio" name="#" value="#">Counselor
+                            <br>
+                            <input type="radio" name="#" value="#">Medical professional
+                            <br>
+                            <input type="radio" name="#" value="#">NHS
+                            <br>
+                            <input type="radio" name="#" value="#">Prefer not to say
+                        </td>
+                    </form>
+                </tr>
+                <tr>
+                    <td colspan="4" width="100%">Do you have a Care Plan?</td>
+                </tr>
+                <tr>
+                    <td colspan="4" width="100%">
+                        <form>
+                            <input type="radio" name="#" value="#">Yes
+                            <input type="radio" name="#" value="#">No
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" width="100%">If yes, is your Care Plan</td>
+                </tr>
+                <tr>
+                    <td colspan="4" width="100%">
+                        <form>
+                            <input type="radio" name="#" value="#">Funded
+                            <input type="radio" name="#" value="#">Self-funded
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" width="100%">In the past month have you taken part in any of the below activities?</td>
+                </tr>
+                <tr>
+                    <td colspan="4" width="100%">
+                        <form>
+                            <input type="radio" name="#" value="#">Yes
+                            <input type="radio" name="#" value="#">No
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" width="100%">If yes, please select all that apply</td>
+                </tr>
+                <tr>
+                    <td colspan="4" width="100%">
+                        <form>
+                            <input type="checkbox" name="#" value="#">Volunteered to help an individual (e.g. to help a neighbor)
+                            <br>
+                            <input type="checkbox" name="#" value="#">Volunteered through your networks (e.g. through work, or your children's school)
+                            <br>
+                            <input type="checkbox" name="#" value="#">Volunteered outside of your networks (e.g. with a charity or community centre)
+                            <br>
+                            <input type="checkbox" name="#" value="#">Been a member of a group, club or society (hobby group, religious, political party)
+                            <br>
+                            <input type="checkbox" name="#" value="#">Attended any community events (e.g. street parties, fundraisers)
                         </form>
                     </td>
                 </tr>
